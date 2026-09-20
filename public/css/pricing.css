@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap');
+
+:root {
+  --wine: #701c2b;
+  --wine-hover: #581622;
+  --wine-dark: #45121d;
+  --ink: #251e21;
+  --muted: #776d70;
+  --cream: #f8f3ed;
+  --paper: #ffffff;
+  --gold: #bd8a4b;
+  --line: #e8ddd5;
+  --card-shadow: 0 10px 30px rgba(70, 28, 43, 0.06);
+  --card-hover-shadow: 0 16px 40px rgba(70, 28, 43, 0.12);
+}
+
+html, body.page-pricing {
+  min-height: 100vh;
+  background-color: #f8f3ed !important;
+  background: #f8f3ed !important;
+  color: var(--ink);
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  padding-top: 55px !important;
+  margin: 0;
+}
+
+.pricing-page-wrapper {
+  min-height: calc(100vh - 55px);
+  background-color: #f8f3ed !important;
+  background: #f8f3ed !important;
+  padding: 45px 20px 80px;
+}
+
+.pricing-header {
+  max-width: 680px;
+  margin: 0 auto 45px auto;
+  text-align: center;
+}
+
+.pricing-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--wine);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.pricing-eyebrow span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--wine);
+  display: inline-block;
+}
+
+.pricing-header h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(34px, 4.5vw, 52px);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  margin-bottom: 14px;
+}
+
+.pricing-header h1 em {
+  font-style: italic;
+  color: var(--wine);
+}
+
+.pricing-header p {
+  font-size: 16px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Pricing Cards */
+.pricing-cards-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.pricing-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--card-hover-shadow);
+  border-color: #d8c8bd;
+}
+
+.pricing-card.featured {
+  border: 2px solid var(--wine);
+  box-shadow: 0 14px 38px rgba(112, 28, 43, 0.12);
+}
+
+.popular-badge {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  background: var(--wine);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.pricing-card-header {
+  padding: 28px 24px 16px;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  text-align: center;
+}
+
+.pricing-card-header h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0;
+}
+
+.pricing-card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.pricing-card-price {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.pricing-card-price .amount {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--ink);
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.pricing-card-price .period {
+  font-size: 15px;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.pricing-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px 0;
+  flex-grow: 1;
+}
+
+.pricing-features-list li {
+  padding: 8px 0;
+  font-size: 14.5px;
+  color: #443c40;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pricing-features-list li svg {
+  color: var(--wine);
+  flex-shrink: 0;
+}
+
+.pricing-card .btn-pricing {
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: block;
+}
+
+.btn-pricing-outline {
+  border: 1.5px solid var(--wine);
+  color: var(--wine);
+  background: transparent;
+}
+
+.btn-pricing-outline:hover {
+  background: var(--wine);
+  color: #fff;
+}
+
+.btn-pricing-solid {
+  background: var(--wine);
+  color: #fff;
+  border: 1.5px solid var(--wine);
+}
+
+.btn-pricing-solid:hover {
+  background: var(--wine-hover);
+  border-color: var(--wine-hover);
+  color: #fff;
+}
+
+/* Compare Table */
+.pricing-compare-section {
+  max-width: 1100px;
+  margin: 60px auto 0;
+}
+
+.pricing-compare-section h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 28px;
+  color: var(--ink);
+}
+
+.compare-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+  padding: 12px 20px;
+}
+
+.table-custom {
+  margin: 0;
+  color: var(--ink);
+}
+
+.table-custom th {
+  padding: 16px 12px;
+  font-weight: 600;
+  font-size: 15px;
+  border-bottom: 1px solid var(--line);
+}
+
+.table-custom td {
+  padding: 16px 12px;
+  vertical-align: middle;
+  border-bottom: 1px solid #f1e9e2;
+  color: #4a4145;
+}
+
+.table-custom tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.table-custom .check-icon {
+  color: var(--wine);
+}
+
+/* Footer styling */
+.pricing-footer {
+  max-width: 1100px;
+  margin: 50px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.pricing-footer a {
+  color: var(--wine);
+  text-decoration: none;
+}
+
+.pricing-footer a:hover {
+  text-decoration: underline;
+}

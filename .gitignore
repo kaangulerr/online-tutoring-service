@@ -1,0 +1,35 @@
+# Environment variables
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+!.env.example
+services/ai_service/.env
+!services/ai_service/.env.example
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.venv
+venv/
+ENV/
+
+# IDE and Editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+.ftpquota
+
+# Log files
+storage/logs/*.log
+
+# Composer (If used in the future)
+vendor/
+
+# User uploaded files (keep the directory but ignore contents)
+public/images/uploads/*
+!public/images/uploads/.gitkeep

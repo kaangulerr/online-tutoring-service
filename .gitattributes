@@ -1,0 +1,12 @@
+# Auto detect text files and perform LF normalization (cross-platform consistency)
+* text=auto eol=lf
+
+# Language overrides
+*.php linguist-language=PHP
+database/*.sql linguist-detectable=false
+
+# Exclude dev and config files from export / archive
+/.idea export-ignore
+/.vscode export-ignore
+.gitattributes export-ignore
+.gitignore export-ignore
